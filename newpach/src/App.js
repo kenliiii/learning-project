@@ -39,7 +39,8 @@ if(isstart){
   useEffect(()=>{
     const getData=async()=>{
     const sendHttpGet = async () => {
-      const response = await getDoc(useCollertionRef)
+      const response = await fetch(
+          "https://react-http-35cf1-default-rtdb.asia-southeast1.firebasedatabase.app/cart.json")
       
         if (!response.ok) {
           throw Error("can not send");
