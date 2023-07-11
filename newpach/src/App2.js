@@ -8,15 +8,16 @@ import { AuthContextProvider } from './components/store/auth-context';
 import App from "./App";
 function App2() {
   const ctx = useContext(AuthContext)
+
+  const login=<React.Fragment>
+    <MainHeader/>
+    <main>
+      {!ctx.isLoggedIn && <Login/>}
+    </main>
+  </React.Fragment>
   return (
       <AuthContextProvider>
-    <React.Fragment>
-      <MainHeader/>
-      <main>
-        {!ctx.isLoggedIn && <Login/>}
-        {ctx.isLoggedIn && <App/>}
-      </main>
-    </React.Fragment>
+        {ctx.isLoggedIn ? <App/>:login}
       </AuthContextProvider>
   )
 }
