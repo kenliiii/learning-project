@@ -5,6 +5,7 @@ import Home from './components/Home/Home';
 import MainHeader from './components/MainHeader/MainHeader';
 import AuthContext from './components/store/auth-context';
 import { AuthContextProvider } from './components/store/auth-context';
+import App from "./App";
 function App2() {
   const ctx = useContext(AuthContext)
   return (
@@ -13,7 +14,7 @@ function App2() {
       <MainHeader/>
       <main>
         {!ctx.isLoggedIn && <Login/>}
-        {ctx.isLoggedIn && <Home/>}
+        {ctx.isLoggedIn && <App/>}
       </main>
     </React.Fragment>
       </AuthContextProvider>
