@@ -13,13 +13,17 @@ const MainHeader = (props) => {
           <li>
             <CartButton />
           </li>
+
+        </ul>
+
+      </nav>
+        <nav>
+            <ul>
             <li>
-                <button>
-                    <button onClick={ctx.onLogout}>Logout</button>
-                </button>
+                <button onClick={ctx.onLogout}>Logout</button>
             </li>
         </ul>
-      </nav>
+        </nav>
     </header>
   );
 };
