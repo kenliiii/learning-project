@@ -4,14 +4,13 @@ import Layout from "./components/Layout/Layout";
 import Products from "./components/Shop/Products";
 import { useEffect } from "react";
 import { cartAction } from "./store/cart-slice";
-import {collection,getDoc} from 'firebase/firestore'
-import { db } from "./FireStore";
+
 let isstart=true
 function App() {
   const isShowCart = useSelector((state) => state.ui.cartIsShow);
   const cart = useSelector((state) => state.cart);
   const dispatch=useDispatch()
-  const useCollertionRef=collection(db,'carts')
+
 
 
   useEffect(() => {
