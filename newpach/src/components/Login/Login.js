@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useReducer, useContext, useRef } from 'react';
 
-import Card from '../../../src2/components/UI2/Card/Card';
+import Card from '../../../src/components/UI2/Card/Card';
 import classes from './Login.module.css';
-import Button from '../../../src2/components/UI2/Button/Button';
+import Button from '../../../src/components/UI2/Button/Button';
 import AuthContext from '../store/auth-context';
-import { Input } from '../../../src2/components/UI2/Input/Input';
+import { Input } from '../../../src/components/UI2/Input/Input';
 
 const emailReducer = (state,action) =>{
 

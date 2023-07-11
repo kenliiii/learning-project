@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 
-import Card from '../../../src2/components/UI2/Card/Card';
+import Card from '../../../src/components/UI2/Card/Card';
 import classes from './Home.module.css';
-import Button from '../../../src2/components/UI2/Button/Button';
+import Button from '../../../src/components/UI2/Button/Button';
 import AuthContext from '../store/auth-context';
 const Home = (props) => {
   const authCtx = useContext(AuthContext)
