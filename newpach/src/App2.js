@@ -11,11 +11,14 @@ function App2() {
 
   const login=<React.Fragment>
     <MainHeader/>
+    <br/>
+    <br/>
+    <br/>
     <main>
       {!ctx.isLoggedIn && <Login/>}
     </main>
   </React.Fragment>
-  console.log(ctx.isLoggedIn)
+
   return (<React.Fragment>
       {ctx.isLoggedIn ? <App/>:login}
       </React.Fragment>
