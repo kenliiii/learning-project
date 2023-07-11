@@ -4,6 +4,7 @@ import Layout from "./components/Layout/Layout";
 import Products from "./components/Shop/Products";
 import { useEffect } from "react";
 import { cartAction } from "./store/cart-slice";
+import App2 from "../src2/App";
 
 let isstart=true
 function App() {
@@ -60,13 +61,17 @@ if(isstart){
   }
   getData()
 },[])
-  
+  const reduxCart=<Layout>
+    {isShowCart && <Cart />}
+    <Products />
+  </Layout>
  
   return (
-    <Layout>
-      {isShowCart && <Cart />}
-      <Products />
-    </Layout>
+  <>
+
+    <App2></App2>
+    {reduxCart}
+  </>
   );
 }
 
